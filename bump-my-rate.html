@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script src="" async defer></script>
+    </head>
+    <body>
+        <button><p>Bump My Rate</p>
+            <span style="font-size:60px;" id="bumper"></span>
+        </button>
+        <script>
+            var text = ["&#129308;   &#129307;",
+                        " &#129308;  &#129307;", 
+                        "  &#129308; &#129307;", 
+                        "   &#129308;&#129307;", 
+                        "   &#129297;",
+                        "   &#129297;"];
+            var counter = 0;
+            var elem = document.getElementById("bumper");
+            var inst = setInterval(change, 500);
+
+            function change() {
+            elem.innerHTML = text[counter];
+            counter++;
+            if (counter >= text.length) {
+                counter = 0;
+                // clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle
+            }
+            }
+        </script>
+    </body>
+</html>
